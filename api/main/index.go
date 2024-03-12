@@ -34,6 +34,7 @@ var DivertList = []string{"/js/site.js",
 	"/tour/static/css/app.css",
 	"/groxy/injects-js.js",
 	"/groxy/injects-css.css",
+	"/groxy/patch.js",
 	"/sw.js"}
 
 var DivertList_length = len(DivertList)
