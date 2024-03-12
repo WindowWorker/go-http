@@ -43,28 +43,28 @@ func OnServerlessRequest(responseWriter http.ResponseWriter, request *http.Reque
 }
 
 func HandleRequest(responseWriter *http.ResponseWriter, request *http.Request) {
-	if(strings.Contains(request.Header.Get('bot-protection'),"bot")){
+	if(strings.Contains(request.Header.Get("user-agent"),"bot")){
 		(*responseWriter).WriteHeader(301)
 		(*responseWriter).Header().Set("location", "https://www.google.com")
 		defer (*responseWriter).Write([]byte(`<!DOCTYPE html>
 		<html>
 		<head>
 		<meta http-equiv="refresh" content="0; url=https://go.patrickring.net/">
-		<script>location.replace('https://go.patrickring.net/');/script>
+		<script>location.replace("https://go.patrickring.net/");/script>
 		</head>
 		<body>
 		</body>
 		</html>`))
 		return
 	}
-	if(len(request.Header.Get('bot-protection'))<2){
+	if(len(request.Header.Get("bot-protection"))<2){
 		(*responseWriter).Header().Set("content-type", "text/html")
 		(*responseWriter).Header().Set("location", "https://www.google.com")
 		defer (*responseWriter).Write([]byte(`<!DOCTYPE html>
 		<html>
 		<head>
 		<meta http-equiv="refresh" content="0; url=https://go.patrickring.net/">
-		<script>location.replace('https://go.patrickring.net/');/script>
+		<script>location.replace("https://go.patrickring.net/");/script>
 		</head>
 		<body>
 		</body>
