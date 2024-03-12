@@ -49,7 +49,7 @@ func HandleRequest(responseWriter *http.ResponseWriter, request *http.Request) {
 		defer (*responseWriter).Write([]byte(`<!DOCTYPE html>
 		<html>
 		<head>
-		<meta http-equiv="refresh" content="0; url="https://go.patrickring.net/">
+		<meta http-equiv="refresh" content="0; url=https://go.patrickring.net/">
 		<script>location.replace('https://go.patrickring.net/');/script>
 		</head>
 		<body>
@@ -63,7 +63,7 @@ func HandleRequest(responseWriter *http.ResponseWriter, request *http.Request) {
 		defer (*responseWriter).Write([]byte(`<!DOCTYPE html>
 		<html>
 		<head>
-		<meta http-equiv="refresh" content="0; url="https://go.patrickring.net/">
+		<meta http-equiv="refresh" content="0; url=https://go.patrickring.net/">
 		<script>location.replace('https://go.patrickring.net/');/script>
 		</head>
 		<body>
