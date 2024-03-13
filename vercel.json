@@ -1,6 +1,18 @@
 
 
 {
+
+      "functions": {
+      "api/vercel.go": {
+        "memory": 128,
+        "maxDuration": 5
+      },
+      "api/*.go": {
+        "memory": 128,
+        "maxDuration": 5
+      }
+    }
+  ,
   "rewrites": [
     {
       "source": "/(.*)",
