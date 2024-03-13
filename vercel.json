@@ -7,7 +7,7 @@
         "memory": 128,
         "maxDuration": 5
       },
-      "api/*.go": {
+      "api/*": {
         "memory": 128,
         "maxDuration": 5
       }
